@@ -5,7 +5,7 @@ import threading
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.ext import Application, CommandHandler, ContextTypes
 
-# --- CONFIGURATION (COMPLETELY FIXED) ---
+# --- CONFIGURATION (100% CORRECTED CODES) ---
 BOT_TOKEN = "8500678472:AAGGLKJiJivVisv4wNf1YD7p6YdXgzhSQTSok"
 ADMIN_ID = 8660958097
 GAME_LINK = "https://satarlone.may9.vip/register.html"
@@ -13,14 +13,17 @@ GUIDE_LINK = "https://t.me/may9office"
 
 logging.basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO)
 
+# Start လုပ်ထားသူများစာရင်း မှတ်ရန်
 USER_LIST = set()
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     user = update.effective_user
     chat_id = update.effective_chat.id
     
+    # လူသစ် ID ကို စာရင်းထဲမှတ်ခြင်း
     USER_LIST.add(chat_id)
     
+    # လူသစ်ဝင်လာလျှင် ပိုင်ရှင် (အစ်ကို့ဆီ) သို့ စာလှမ်းပို့ပေးခြင်း
     if chat_id != ADMIN_ID:
         notify_text = f"🔔 **လူသစ်တစ်ယောက် Bot ကို Start လုပ်လိုက်ပါတယ်!**\n\n👤 အမည်: {user.first_name}\n🆔 User ID: `{chat_id}`\n🔗 Username: @{user.username if user.username else 'မရှိပါ'}"
         try:
@@ -44,6 +47,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     reply_markup = InlineKeyboardMarkup(keyboard)
     await update.message.reply_text(text=welcome_text, reply_markup=reply_markup)
 
+# အစ်ကိုတစ်ယောက်တည်း သုံးသူစာရင်းကြည့်ရန် Command (/users)
 async def view_users(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     if update.effective_chat.id == ADMIN_ID:
         total = len(USER_LIST)
@@ -51,6 +55,7 @@ async def view_users(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None
     else:
         await update.message.reply_text("❌ သင်သည် ပိုင်ရှင် (Admin) မဟုတ်ပါ။")
 
+# အစ်ကိုတစ်ယောက်တည်း လူအားလုံးဆီ စာလှမ်းပို့ရန် Command (/send စာသား)
 async def broadcast(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     if update.effective_chat.id != ADMIN_ID:
         await update.message.reply_text("❌ သင်သည် ပိုင်ရှင် (Admin) မဟုတ်ပါ။")
