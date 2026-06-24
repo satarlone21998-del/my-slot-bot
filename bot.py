@@ -5,11 +5,10 @@ import threading
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.ext import Application, CommandHandler, ContextTypes
 
-# --- ပြင်ဆင်ရန်နေရာများ ---
-BOT_TOKEN = "မင်းရဲ့_BOT_TOKEN_ဒီမှာထည့်ပါ"
-GAME_LINK = "https://yourgamelink.com"  # ကိုယ့်ဂိမ်းလင့်ခ်
-GUIDE_LINK = "https://t.me/your_channel" # အကောင့်ဖွင့်နည်းလင့်ခ် သို့မဟုတ် Channel လင့်ခ်
-# ------------------------
+BOT_TOKEN = "8500678472:AAGGLKJivVisv4wNf1YD7p6YdXgzhSQTSok"
+GAME_LINK =  "https://satarlone.may9.vip/register.html"
+GUIDE_LINK = "https://t.me/may9office"
+# -------------------------------------------------------------
 
 logging.basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO)
 
@@ -51,4 +50,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-  
