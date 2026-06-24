@@ -5,8 +5,9 @@ import threading
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.ext import Application, CommandHandler, ContextTypes
 
-# --- CONFIGURATION (100% CORRECTED CODES) ---
-BOT_TOKEN = "8500678472:AAGGLKJiJivVisv4wNf1YD7p6YdXgzhSQTSok"
+# --- CONFIGURATION ---
+# ⚠️ အောက်က နေရာမှာ ခုနက BotFather ဆီက ရလာတဲ့ Token အသစ်စက်စက်ကြီးကိုပဲ ထည့်ပေးပါ အစ်ကို
+BOT_TOKEN = "8500678472:AAGGLKJivVisv4wNf1YD7p6YdXgzhSQTSok"
 ADMIN_ID = 8660958097
 GAME_LINK = "https://satarlone.may9.vip/register.html"
 GUIDE_LINK = "https://t.me/may9office"
@@ -101,3 +102,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+    
