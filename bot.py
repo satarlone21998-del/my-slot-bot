@@ -5,10 +5,9 @@ import threading
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.ext import Application, CommandHandler, ContextTypes
 
-BOT_TOKEN = "8500678472:AAGGLKJivVisv4wNf1YD7p6YdXgzhSQTSok"
-GAME_LINK =  "https://satarlone.may9.vip/register.html"
+BOT_TOKEN = "8500678472:AAGGLKJiJivVisv4mNf1YD7p6YdXgzhSQTSok"
+GAME_LINK = "https://satarlone.may9.vip/register.html"
 GUIDE_LINK = "https://t.me/may9office"
-# -------------------------------------------------------------
 
 logging.basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO)
 
